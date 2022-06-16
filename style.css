@@ -1,16 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Kumbh+Sans:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   text-decoration: 0;
   box-sizing: border-box;
   font-size: 16px;
-}
-
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  font-family: 'Lexend Deca', sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -34,15 +29,89 @@ select {
   font: inherit;
 }
 
-/* -------------------- */
+/* colors  */
 
 :root {
   /* primary */
-  --orange: hsl(31, 77%, 52%);
-  --cyan: hsl(184, 100%, 22%);
-  --dark-cyan: hsl(179, 100%, 13%);
+  --cyan: hsl(185, 75%, 39%);
+  --dark-gray: hsl(229, 23%, 23%);
+  --light-gray: hsl(227, 10%, 46%);
   /* neutral */
-  --white: hsla(0, 0%, 100%, 0.971);
-  --white-transparent: hsla(0, 0%, 100%, 0.727);
-  --light-gray-bg: hsl(0, 0%, 95%);
+  --gray: hsl(0, 0%, 59%);
+  --white: hsl(0, 0%, 95%);
+}
+
+.cyan {
+  color: var(--cyan);
+}
+
+.dark__gray {
+  color: var(--dark-gray);
+}
+
+.light__gray {
+  color: var(--light-gray);
+}
+
+.gray {
+  color: var(--gray);
+}
+
+.bg__white {
+  background-color: var(--white);
+}
+
+.main__background {
+  background-image: url(./images/bg-pattern-bottom.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Kumbh Sans', sans-serif;
+  background: var(--cyan) url(./images/bg-pattern-top.svg) no-repeat;
+  background-size: contain;
+}
+
+.container {
+  width: 350px;
+  height: 100%;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 2.75rem;
+  box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
+  background-color: var(--white);
+}
+
+.profile__stats {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.h1 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.h1__span {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.span__text {
+  font-size: 0.7rem;
+  font-weight: 400;
 }
