@@ -29,3 +29,15 @@ Dark gray: hsl(0, 0%, 59%)
 
 - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
 - Weights: 400, 700
+.img__box {
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  max-width: 100%;
+  transform: scale(0.5);
+}
+
+.profile__img:hover {
+  transform: scale(1.1);
+  transition: ease-in-out 1s;
+}

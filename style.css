@@ -38,8 +38,7 @@ select {
   --light-gray: hsl(227, 10%, 46%);
   /* neutral */
   --gray: hsl(148, 8%, 34%);
-  --white: rgba(241, 241, 241, 0.9);
-  --gradient: linear-gradient(180deg, #F0EB8F 20%, #c2ee69 100%);
+  --white: hsl(120, 3%, 99%);
 }
 
 .cyan {
@@ -71,9 +70,8 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-
+  line-height: 1.1;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
   font-family: 'Kumbh Sans', sans-serif;
 }
 
@@ -87,29 +85,56 @@ body {
   height: 100%;
   text-align: center;
   border-radius: 0.5rem;
+  box-shadow: 15px 50px 100px -20px rgba(19, 35, 25, 0.493);
+  background: rgb(255, 255, 255);
+}
+
+.wrapper {
   padding: 2.75rem;
-  box-shadow: 0px 50px 100px -20px rgba(8, 69, 30, 0.349);
-  background: rgba(241, 241, 241, 0.9);
 }
 
 .img__box {
   display: block;
-  margin: auto;
-  /* overflow: hidden; */
   overflow: hidden;
-  max-width: 100%;
-  transform: scale(1);
+  border: solid 5px rgb(255, 255, 255);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-top: -100px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: ease-in 1s;
+  position: relative;
+  z-index: 1;
+}
+
+.img__box:hover {
+  border: solid 7px rgb(193, 255, 127);
+  transition: ease-out 0.6s;
+}
+
+.profile__img {
+  transform: scale(1.25);
+  transition: ease-in 1s;
+}
+
+.profile__img:hover {
+  transform: scale(1) rotate(15deg);
+  transition: ease-out 0.6s;
 }
 
 .profile__stats {
   display: grid;
+  line-height: 1.35;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
+  margin-top: 1.75rem;
 }
 
 .h1 {
   font-size: 1.125rem;
   font-weight: 700;
+  padding-top: 1.75rem;
   color: var(--dark-gray);
 }
 
@@ -121,6 +146,14 @@ body {
 .h2 {
   font-size: 0.9rem;
   font-weight: 400;
+  padding-top: 0.5rem;
+}
+
+.h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--dark-gray);
 }
 
 .span__text {
@@ -128,19 +161,14 @@ body {
   font-weight: 400;
 }
 
-.padding__bottom {
-  padding-bottom: 1.5rem;
-}
-
-.padding__bottom--sm {
-  padding-bottom: 0.5rem;
-}
-
-.margin__bottom {
-  margin-bottom: 1.5rem;
-}
-
 .divider {
   border-top: 1px solid rgba(111, 144, 102, 0.5);
   border-radius: 5px;
+  margin-top: 1.75rem;
+}
+
+.container__header {
+  display: block;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
 }
