@@ -36,11 +36,9 @@ select {
   --cyan: hsl(185, 75%, 39%);
   --dark-gray: hsl(140, 29%, 16%);
   --light-gray: hsl(227, 10%, 46%);
-  --green: #56de9a;
   /* neutral */
   --gray: hsl(148, 8%, 34%);
   --white: hsl(120, 3%, 95%);
-  --purple: hsla(321, 77%, 80%, 1);
 }
 
 
@@ -66,30 +64,20 @@ body {
   color: var(--dark-gray);
 }
 
-.h1--v2 {
-  font-size: 1.125rem;
-  font-weight: 700;
-  padding-top: 0.9375rem;
-  color: var(--green);
-}
-
-/* 
-**** change text while hovering using data-hover
 .text__hover:hover {
   font-size: 0;
 }
-
 
 .text__hover:hover:before {
   font-size: 1.125rem;
   font-weight: 700;
   padding-top: 0.9375rem;
-  color: var(--purple);
+  color: rgb(18, 114, 61);
   content: attr(data-hover);
-} */
+}
 
-.h1--light,
-.h1--light-v2 {
+
+.h1--light {
   font-size: 1.125rem;
   font-weight: 400;
   color: var(--gray);
@@ -115,7 +103,6 @@ body {
   margin: 1.5rem;
   border-radius: 0.5rem;
   text-align: center;
-  overflow: hidden;
   background-color: var(--white);
   box-shadow: 20px 50px 100px -20px rgba(7, 44, 23, 0.604);
 }
@@ -130,7 +117,6 @@ body {
 
 .container__header:hover {
   transform: scaleY(-1);
-  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .wrapper {
@@ -140,7 +126,7 @@ body {
 .card__photo {
   display: block;
   overflow: hidden;
-  border: solid 5px var(--dark-gray);
+  border: solid 5px hsla(104, 69%, 76%, 1);
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
@@ -154,25 +140,14 @@ body {
 }
 
 .card__photo:hover {
-  border: solid 7px var(--green);
+  border: solid 7px hsla(321, 77%, 80%, 1);
   box-shadow: 20px 50px 100px -20px rgba(7, 44, 23, 0.082);
   transition: ease-out 0.6s;
 }
 
-
-.card__photo:hover~.hover--on {
-  display: none;
-  color: var(--green);
+.card__photo:hover~.card__photo h1 {
+  color: hsla(321, 77%, 80%, 1);
 }
-
-.card__photo:hover~.hover--off {
-  display: block;
-}
-
-.hover--off {
-  display: none;
-}
-
 
 .card__photo img {
   transform: scale(1.25);
@@ -190,22 +165,16 @@ body {
 }
 
 .divider {
-  border-top: 1px solid var(--gray);
+  border-top: 1px solid rgba(111, 144, 102, 0.5);
   border-radius: 5px;
   margin-top: 1.2rem;
-  opacity: 0.5;
 }
-
 
 .card__stats {
   display: grid;
   line-height: 1.35;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
-}
-
-.card__stats .h1:hover~.h3 {
-  color: var(--green);
 }
 
 @media (max-width: 270px) {
@@ -224,8 +193,7 @@ body {
     content: url(./images/will-mobile.jpg);
   }
 
-  .h1--light,
-  .h1--light-v2 {
+  .h1--light {
     display: none;
   }
 }
