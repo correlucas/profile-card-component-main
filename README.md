@@ -72,7 +72,7 @@ Your users should be able to:
 ### Links
 
 - Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/freshprince-profile-card-component-custom-design-and-hover-states-NKHxJ_Asug)
-- Live Site URL: [Live Site at Vercel]([https://profile-card-component-main-chi-eight.vercel.app/](https://profile-card-component-main-mkm4ldzwr-correlucas.vercel.app/))
+- Live Site URL: [Live Site at Vercel](https://profile-card-component-main-mkm4ldzwr-correlucas.vercel.app/)
 ## My process
 
 ### Built with
